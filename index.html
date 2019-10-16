@@ -28,6 +28,7 @@ Ajay Balkaran
 
             <div class="form">
                 <form action="index.html" method="POST">
+                    
                     <div class="contact-info">
                         <h2>Contact Information</h2>
 
@@ -102,9 +103,31 @@ Ajay Balkaran
 
                         <label for="zip_code">Zip Code</label>
                         <input type="text" id="zip_code" name="user_zip_code">
+                        <hr>
                     </div>
 
                     <div class="sub-info">
+                        <h2>Newsletter</h2>
+
+                        <label>Select the newsletters you would like to recive</label>
+
+                        <input type="checkbox" id="intrest_html" value="intrest_html" name="user_intrest"><label for="intrest_html">HTML News</label>
+                        <br>
+                        <input type="checkbox" id="intrest_css" value="intrest_css" name="user_intrest"><label for="intrest_css">CSS News</label>
+                        <br>
+                        <input type="checkbox" id="intrest_javascript" value="intrest_javascript" name="user_intrest"><label for="intrest_javascript">Javascript News</label>
+
+                        
+                        <label>Newsletter format</label>
+                        
+                        <input type="radio" id="html_format" value="html_format" name="user_newsletter_format"><label for="html_format">HTML</label>
+                        <br>
+                        <input type="radio" id="plain_format" value="plain_format" name="user_newsletter_format"><label for="plain_format">Plain Text</label>
+
+                        <label for="other_topics">Other topics you'd like to hear about</label>
+                        <textarea id="other_topics" name="user_other_topics"></textarea>
+
+                        <button type="submit">Sign Up</button>
 
                     </div>
                 </form>
