@@ -93,10 +93,6 @@ h1 {
 legend {
     /* display: block; */
     font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
     font-weight: bold;
     padding-top: 1em;
     position: relative;
@@ -169,6 +165,11 @@ select:focus {
     background-color: #343d46;
     color: white;
     transition: 500ms ease-in-out;
+}
+
+.contact-info hr {
+    position: relative;
+    top: 1.5em;
 }
 
 
@@ -335,11 +336,6 @@ footer {
         display: block;
         padding-top: 2em;
         font-weight: 400;
-    }
-
-    .contact-info hr {
-        position: relative;
-        top: 1.4em;
     }
 
     /*=========Newsletter=============*/
