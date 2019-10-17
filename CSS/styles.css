@@ -6,19 +6,22 @@ url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap
 
 body {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    
 }
 
 header,
 .contact-info,
-.sub-info {
+.sub-info,
+.container-button {
     display: flex;
     flex-direction: column;
 }
 
 .intro,
 .contact-info,
-.sub-info {
-    margin: 1em;
+.sub-info,
+.container-button {
+    padding: 1em;
 }
 
 input,
@@ -27,6 +30,17 @@ select {
     background-color: #E8E8E8;
     border-radius: 0.3125em;
     border: none;
+    padding: 15px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+input,
+textarea,
+select,
+button {
+    width: 100%;
 }
 
 input,
@@ -50,6 +64,13 @@ hr {
     border: 0.0625em solid #343d46;
 }
 
+fieldset {
+    padding: 0;
+    border: none;
+    margin: 0;
+}
+
+
 /*Typography
 ===============================*/
 header,
@@ -69,6 +90,19 @@ h1 {
     color: #B0B0B0; 
 }
 
+legend {
+    /* display: block; */
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    padding-top: 1em;
+    position: relative;
+    top: 21px;
+}
+
 
 /*Header
 ===============================*/
@@ -84,7 +118,8 @@ h1{
 /*Intro
 ===============================*/
 .intro {
-    margin: 2em 1em 1em;
+    margin: 2em 0 1em;
+    padding-bottom: 0;
 }
 .break{
     margin: 2.5em 0 0.3125em;
@@ -99,6 +134,8 @@ h1{
 ===============================*/
 .contact-info {
     margin-bottom: 0;
+    background-color: rgb(248, 248, 248);
+    padding: 1em;
 }
 
 .contact-info h2 {
@@ -114,10 +151,24 @@ input[id="zip_code"] {
     width: 50%;
 }
 
-input::placeholder {
+
+input::placeholder,
+textarea::placeholder {
     text-align: right;
-    padding-right: 2em;
     color: silver;
+}
+
+
+.contact-info hr {
+    width: 100%;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    background-color: #343d46;
+    color: white;
+    transition: 500ms ease-in-out;
 }
 
 
@@ -127,11 +178,7 @@ input::placeholder {
     margin-top: 0;
 }
 
-.sub-info hr {
-    width: 100%;
-}
-
-.sub-info-h2 {
+.sub-info legend {
     margin-bottom: 0;
 }
 
@@ -153,6 +200,11 @@ button{
     border: none;
     border-radius: 0.1875em;
     height: 3em;
+    margin-bottom: 2em;
+}
+
+button:hover {
+    background-color: #08726b;
 }
 
 
@@ -242,7 +294,8 @@ button{
 footer {
     text-align: center;
     color: #B0B0B0;
-    margin: 2em 0 1em;
+    padding: 2em 0 1em;
+    background-color: #343d46 ;
 }
 
 

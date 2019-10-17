@@ -28,27 +28,27 @@ Ajay Balkaran
 
             <div class="form">
                 <form action="index.html" method="POST">
-                    
-                    <div class="contact-info">
-                        <h2>Contact Information</h2>
+
+                    <fieldset class="contact-info">
+                        <legend>Contact Information</legend>
 
                         <label for="name">Full Name</label>
-                        <input type="text" id="name" name="user_name" placeholder="Required"> 
+                        <input type="text" id="name" name="user_name" required placeholder="Required"> 
                         
                         <label for="email">Email Adress</label>
-                        <input type="email" id="email" name="user_email" placeholder="Required">
+                        <input type="email" id="email" name="user_email" required placeholder="Required">
                         
                         <label for="tel">Phone Number</label>
-                        <input type="tel" id="tel" name="user_tel">
+                        <input type="tel" id="tel" name="user_tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="I.e (555)-555-5555">
                         
                         <label for="address">Street Adress</label>
-                        <input type="text" id="address" name="user_address">
+                        <input type="text" id="address" name="user_address"> 
                         
                         <label for="city">City</label>
                         <input type="text" id="city" name="user_city">
 
                         <label for="state">State</label>
-                        <select id="state" name="user_state">
+                        <select id="state" name="user_state" required placeholder="Required">
                             <option value="" hidden>Choose State</option>
                             <option value="alabama">Alabama</option>
                             <option value="alaska">Alaska</option>
@@ -103,12 +103,12 @@ Ajay Balkaran
                         </select>
 
                         <label for="zip_code">Zip Code</label>
-                        <input type="text" id="zip_code" name="user_zip_code">
-                    </div>
-
-                    <div class="sub-info">
+                        <input type="text" id="zip_code" name="user_zip_code" required pattern="[0-9]{5}" placeholder="Ie. 15244">
                         <hr>
-                        <h2 class="sub-info-h2">Newsletter</h2>
+                    </fieldset>
+
+                    <fieldset class="sub-info">
+                        <legend>Newsletter</legend>
 
                         <label class="sub-info-label">Select the newsletters you would like to recive</label>
 
@@ -124,13 +124,6 @@ Ajay Balkaran
                             <input type="checkbox" id="intrest_javascript" value="intrest_javascript" name="user_intrest">
                             <span class="checkmark"></span>
                         </label>
-
-                        <!-- <input type="checkbox" id="intrest_html" value="intrest_html" name="user_intrest"><label for="intrest_html">HTML News</label>
-                        <br>
-                        <input type="checkbox" id="intrest_css" value="intrest_css" name="user_intrest"><label for="intrest_css">CSS News</label>
-                        <br>
-                        <input type="checkbox" id="intrest_javascript" value="intrest_javascript" name="user_intrest"><label for="intrest_javascript">Javascript News</label> -->
-
                         
                         <label class="sub-info-label">Newsletter format</label>
                         
@@ -144,15 +137,12 @@ Ajay Balkaran
                             <span class="radio_checkmark"></span>
                         </label>
 
-                        <!-- <input type="radio" id="html_format" value="html_format" name="user_newsletter_format"><label for="html_format">HTML</label>
-                        <br>
-                        <input type="radio" id="plain_format" value="plain_format" name="user_newsletter_format"><label for="plain_format">Plain Text</label> -->
-
                         <label class="sub-info-label" for="other_topics">Other topics you'd like to hear about</label>
-                        <textarea id="other_topics" name="user_other_topics"></textarea>
+                        <textarea id="other_topics" name="user_other_topics" placeholder="Optional"></textarea>
+                    </fieldset>
 
+                    <div class="container-button">
                         <button type="submit">Sign Up</button>
-
                     </div>
                 </form>
             </div>
