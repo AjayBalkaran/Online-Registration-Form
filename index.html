@@ -33,10 +33,10 @@ Ajay Balkaran
                         <h2>Contact Information</h2>
 
                         <label for="name">Full Name</label>
-                        <input type="text" id="name" name="user_name"> 
+                        <input type="text" id="name" name="user_name" placeholder="Required"> 
                         
                         <label for="email">Email Adress</label>
-                        <input type="email" id="email" name="user_email">
+                        <input type="email" id="email" name="user_email" placeholder="Required">
                         
                         <label for="tel">Phone Number</label>
                         <input type="tel" id="tel" name="user_tel">
@@ -49,6 +49,7 @@ Ajay Balkaran
 
                         <label for="state">State</label>
                         <select id="state" name="user_state">
+                            <option value="" hidden>Choose State</option>
                             <option value="alabama">Alabama</option>
                             <option value="alaska">Alaska</option>
                             <option value="arizona">Arizona</option>
@@ -107,19 +108,19 @@ Ajay Balkaran
 
                     <div class="sub-info">
                         <hr>
-                        <h2>Newsletter</h2>
+                        <h2 class="sub-info-h2">Newsletter</h2>
 
-                        <label>Select the newsletters you would like to recive</label>
+                        <label class="sub-info-label">Select the newsletters you would like to recive</label>
 
-                        <label class="checkbox-container">HTML News
+                        <label class="checkbox-container" for="intrest_html">HTML News
                             <input type="checkbox" id="intrest_html" value="intrest_html" name="user_intrest">
                             <span class="checkmark"></span>
                         </label>
-                        <label class="checkbox-container">CSS News
+                        <label class="checkbox-container" for="intrest_css">CSS News
                             <input type="checkbox" id="intrest_css" value="intrest_css" name="user_intrest">
                             <span class="checkmark"></span>
                         </label>
-                        <label class="checkbox-container">Javascript News
+                        <label class="checkbox-container" for="intrest_javascript">Javascript News
                             <input type="checkbox" id="intrest_javascript" value="intrest_javascript" name="user_intrest">
                             <span class="checkmark"></span>
                         </label>
@@ -131,7 +132,7 @@ Ajay Balkaran
                         <input type="checkbox" id="intrest_javascript" value="intrest_javascript" name="user_intrest"><label for="intrest_javascript">Javascript News</label> -->
 
                         
-                        <label>Newsletter format</label>
+                        <label class="sub-info-label">Newsletter format</label>
                         
                         <label class="radio-container" for="html_format">HTML
                             <input type="radio" id="html_format" value="html_format" name="user_newsletter_format">
@@ -147,7 +148,7 @@ Ajay Balkaran
                         <br>
                         <input type="radio" id="plain_format" value="plain_format" name="user_newsletter_format"><label for="plain_format">Plain Text</label> -->
 
-                        <label for="other_topics">Other topics you'd like to hear about</label>
+                        <label class="sub-info-label" for="other_topics">Other topics you'd like to hear about</label>
                         <textarea id="other_topics" name="user_other_topics"></textarea>
 
                         <button type="submit">Sign Up</button>

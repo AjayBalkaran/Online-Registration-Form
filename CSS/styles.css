@@ -35,17 +35,19 @@ select {
     height: 3em;
 }
 
-input:focus {
+input:focus,
+textarea:focus,
+select:focus {
     outline-color: #003F87;
     outline-width: thick;
 }
 
 .break {
-    border: 3px solid #343d46;
+    border: 0.1875em solid #343d46;
 }
 
 hr {
-    border: 1px solid #343d46;
+    border: 0.0625em solid #343d46;
 }
 
 /*Typography
@@ -75,22 +77,86 @@ header {
     text-align: center;
 }
 
+h1{
+    margin: 1em;
+}
+
 /*Intro
 ===============================*/
+.intro {
+    margin: 2em 1em 1em;
+}
+.break{
+    margin: 2.5em 0 0.3125em;
+}
+
+.intro hr:last-child {
+    margin-top: 0;
+}
+
 
 /*Contact info
 ===============================*/
+.contact-info {
+    margin-bottom: 0;
+}
+
+.contact-info h2 {
+    margin-top: .25em;
+    margin-bottom: 1em;
+}
+
+input {
+    margin-bottom: 1.3em;
+}
+
 input[id="zip_code"] {
     width: 50%;
 }
 
+input::placeholder {
+    text-align: right;
+    padding-right: 2em;
+    color: silver;
+}
+
+
 /*Newsletter
 ===============================*/
+.sub-info {
+    margin-top: 0;
+}
+
 .sub-info hr {
     width: 100%;
 }
 
-/*=========Custom Check & Radio Box =============*/
+.sub-info-h2 {
+    margin-bottom: 0;
+}
+
+.sub-info-label {
+    margin: 1em 0;
+}
+
+textarea {
+    height: 6em;
+    margin: 0 0 2em;
+}
+
+
+/****Button****/
+
+button{
+    color: white;
+    background-color: #53bab3;
+    border: none;
+    border-radius: 0.1875em;
+    height: 3em;
+}
+
+
+/****Custom Check & Radio Box****/
 
 .checkbox-container,
 .radio-container {
@@ -170,6 +236,16 @@ input[id="zip_code"] {
     border-radius: 50%;
     background: white;
 }
+
+/*Footer
+===============================*/
+footer {
+    text-align: center;
+    color: #B0B0B0;
+    margin: 2em 0 1em;
+}
+
+
 
 /*tablet and desktop size (768px)
 ===============================*/
