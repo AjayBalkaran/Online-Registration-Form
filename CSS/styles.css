@@ -8,15 +8,168 @@ body {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
+header,
+.contact-info,
+.sub-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.intro,
+.contact-info,
+.sub-info {
+    margin: 1em;
+}
+
+input,
+textarea,
+select {
+    background-color: #E8E8E8;
+    border-radius: 0.3125em;
+    border: none;
+}
+
+input,
+select {
+    margin: 1em 0;
+    height: 3em;
+}
+
+input:focus {
+    outline-color: #003F87;
+    outline-width: thick;
+}
+
+.break {
+    border: 3px solid #343d46;
+}
+
+hr {
+    border: 1px solid #343d46;
+}
+
+/*Typography
+===============================*/
+header,
+.intro {
+    text-align: center;
+}
+
+body {
+    color: #343d46;
+}
+
+h1 {
+    color: white;
+}
+
+.intro p {
+    color: #B0B0B0; 
+}
 
 
 /*Header
 ===============================*/
+header {
+    background-color: #343d46;
+    text-align: center;
+}
 
-
-/*
+/*Intro
 ===============================*/
 
+/*Contact info
+===============================*/
+input[id="zip_code"] {
+    width: 50%;
+}
+
+/*Newsletter
+===============================*/
+.sub-info hr {
+    width: 100%;
+}
+
+/*=========Custom Check & Radio Box =============*/
+
+.checkbox-container,
+.radio-container {
+    display: inline-block;
+    position: relative;
+    padding-left: 2em;;
+    margin-bottom: 1em;;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-container input,
+.radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+.checkmark,
+ .radio_checkmark {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1em;
+    width: 1em;
+    background-color: #eee;
+}
+
+.radio_checkmark {
+    border-radius: 50%;
+}
+
+.checkmark {
+    border-radius: 0.1875em;
+}
+
+.checkbox-container:hover input + .checkmark,
+.radio-container:hover input + .radio_checkmark {
+    background-color: #ccc;
+}
+
+.checkbox-container input:checked + .checkmark,
+.radio-container input:checked + .radio_checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark::after,
+.radio_checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked + .checkmark::after,
+.radio-container input:checked + .radio_checkmark::after {
+    display: block;
+}
+
+.checkbox-container .checkmark::after {
+    left: 0.3125em;
+    top: 0.1875em;
+    width: 0.1875em;
+    height: 0.3125em;
+    border: solid white;
+    border-width: 0 0.09375em 0.09375em 0;
+    transform: rotate(45deg);
+}
+
+.radio-container .radio_checkmark::after {
+    top: 0.3125em;
+    left: 0.3125em;
+    width: 0.375em;
+    height: 0.375em;
+    border-radius: 50%;
+    background: white;
+}
 
 /*tablet and desktop size (768px)
 ===============================*/
