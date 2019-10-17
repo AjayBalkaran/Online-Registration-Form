@@ -31,9 +31,9 @@ select {
     border-radius: 0.3125em;
     border: none;
     padding: 15px;
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-    box-sizing: border-box;         /* Opera/IE 8+ */
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;     
 }
 
 input,
@@ -153,11 +153,11 @@ input[id="zip_code"] {
 
 
 input::placeholder,
-textarea::placeholder {
+textarea::placeholder,
+select {
     text-align: right;
     color: silver;
 }
-
 
 .contact-info hr {
     width: 100%;
@@ -299,9 +299,55 @@ footer {
 }
 
 
-
 /*tablet and desktop size (768px)
 ===============================*/
 @media (min-width:48rem) {
-    /*=========Header=============*/
+    
+    /*=========General=============*/
+    .sub-info,
+    .intro,
+    .contact-info,
+    .container-button {
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%; 
+    }
+
+    /*=========Contact Info=============*/
+    .contact-info {
+        display: block;
+        padding-bottom: 0;
+    }
+    input,
+    select {
+        width: 70%;
+        display: inline-block;
+        justify-self: end;
+    }
+
+    input[id="zip_code"]{
+        width: 35%;
+    }
+
+    .contact-info label {
+        width: 30%;
+        float: left;
+        display: block;
+        padding-top: 2em;
+        font-weight: 400;
+    }
+
+    .contact-info hr {
+        position: relative;
+        top: 1.4em;
+    }
+
+    /*=========Newsletter=============*/
+        .sub-info {
+        background-color: rgb(248, 248, 248);
+    }
+
+        .sub-info-label {
+            margin-top: 2em;
+        }
 }
